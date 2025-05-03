@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Đăng ký Khóa Học Trực Tuyến</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      box-sizing: border-box;
+      background-color: #f4f4f4;
+    }
+
+    h2 {
+      color: #333;
+    }
+
+    .container {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .left-column, .right-column {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      flex: 1;
+      min-width: 300px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    form label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    form input, form select, form textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+
+    form input[type="radio"] {
+      width: auto;
+      margin-right: 10px;
+    }
+
+    button {
+      margin-top: 15px;
+      padding: 10px 15px;
+      border: none;
+      background-color: #28a745;
+      color: white;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #218838;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    table, th, td {
+      border: 1px solid #ddd;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: left;
+    }
+
+    .video-section {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    iframe {
+      width: 100%;
+      max-width: 560px;
+      height: 315px;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Trang Đăng ký Khóa Học Trực Tuyến</h2>
+  
+  <div class="container">
+    <!-- Cột trái: Form đăng ký -->
+    <div class="left-column">
+      <form>
+        <label for="name">Họ tên:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label>Giới tính:</label>
+        <input type="radio" name="gender" value="Nam" id="nam"><label for="nam">Nam</label>
+        <input type="radio" name="gender" value="Nữ" id="nu"><label for="nu">Nữ</label>
+
+        <label for="course">Khóa học:</label>
+        <select id="course" name="course">
+          <option value="html">HTML</option>
+          <option value="css">CSS</option>
+          <option value="js">JavaScript</option>
+        </select>
+
+        <label for="note">Ghi chú:</label>
+        <textarea id="note" name="note" rows="4"></textarea>
+
+        <button type="submit">Gửi đăng ký</button>
+      </form>
+    </div>
+
+    <!-- Cột phải: Danh sách khóa học -->
+    <div class="right-column">
+      <h3>Danh sách Khóa học</h3>
+      <table>
+        <tr>
+          <th>Tên khóa học</th>
+          <th>Thời lượng</th>
+          <th>Học phí</th>
+        </tr>
+        <tr>
+          <td>HTML Cơ Bản</td>
+          <td>4 tuần</td>
+          <td>1,000,000 VNĐ</td>
+        </tr>
+        <tr>
+          <td>CSS Nâng Cao</td>
+          <td>5 tuần</td>
+          <td>1,200,000 VNĐ</td>
+        </tr>
+        <tr>
+          <td>JavaScript Chuyên sâu</td>
+          <td>6 tuần</td>
+          <td>1,500,000 VNĐ</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- Video giới thiệu -->
+  <div class="video-section">
+    <h3>Giới thiệu Khóa học</h3>
+    <iframe src="https://www.youtube.com/embed/UB1O30fR-EE" allowfullscreen></iframe>
+  </div>
+  
+</body>
+</html>
